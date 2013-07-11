@@ -1,0 +1,102 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1763" measuredH="757" mockupW="1650" mockupH="710">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="113" y="47" w="1650" h="710" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>FireHost%20Applications%20Log%0Ahttp%3A//log.firehost.net/app%23warning</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TabBar" x="113" y="166" w="1646" h="564" measuredW="329" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>ravelog%20mockup%26bm%3Bravelog%20mockup.bmml%26bm%3Bravelog%20mockup.bmml%26bm%3Bravelog%20mockup.bmml%2Cravelog%20mockup-warning%26bm%3Bravelog%20mockup-warning.bmml%26bm%3Bravelog%20mockup-warning.bmml%26bm%3Bravelog%20mockup-warning.bmml%2C%2C%2Cravelog%20mockup-statistics%26bm%3Bravelog%20mockup-statistics.bmml%26bm%3Bravelog%20mockup-statistics.bmml%26bm%3Bravelog%20mockup-statistics.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2220%2C119%2C98%2C146%22%20href%3D%22ravelog%2520mockup.bmml%22%20alt%3D%22ravelog%20mockup%22%20id%3D%221%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2298%2C119%2C159%2C146%22%20href%3D%22ravelog%2520mockup-warning.bmml%22%20alt%3D%22ravelog%20mockup-warning%22%20id%3D%221%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22247%2C119%2C315%2C146%22%20href%3D%22ravelog%2520mockup-statistics.bmml%22%20alt%3D%22ravelog%20mockup-statistics%22%20id%3D%221%22/%3E%0A</map>
+        <selectedIndex>1</selectedIndex>
+        <text>Information%2C%20Warning%2C%20Error%2C%20Trace%2C%20Statistics</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="114" y="193" w="1643" h="195" measuredW="984" measuredH="171" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hLines>false</hLines>
+        <selectedIndex>4</selectedIndex>
+        <text>Date%20Created%20%5Ev%2C%20Host%20Name%20%5Ev%2C%20Application%20%5Ev%2C%20Assembly%2C%20Message%0A07/09/2013%2012%3A37%3A00%2C%20DFWHQ-AP01%2C%20Automation%20Node%2C%20FireHost.Automation.dll%2C%20AccountSyncWorker%20did%20not%20complete%20successfully.%0A07/09/2013%2013%3A02%3A01%2C%20DFWHQ-PORTAL01%2C%20Secure%20Portal%2C%20FireHost.Web.Portal.dll%2C%20Attemted%20to%20add%20existing%20user%20%5Bscott.meyer@firehost.com%5D%0A07/09/2013%2013%3A07%3A26%2C%20DFWHQ-PORTAL01%2C%20Secure%20Portal%2C%20FireHost.Web.Portal.dll%2C%20Login%20failed%20%5Bnew.user@firehost.com%5D%20%281%29%0A07/09/2013%2013%3A42%3A03%2C%20DFWHQ-IMS01%2C%20IMS%2C%20FireHost.Web.IMS.dll%2C%20Query%20Execution%20for%20%5BTickets_SummaryOpen%5D%20exeeded%203%20seconds%20%284.5123s%29%0A07/09/2013%2016%3A21%3A04%2C%20DFWHQ-QSS01%2C%20QSS%2C%20FireHost.Web.Quotes.dll%2C%20User%20visited%20expired%20quote%20%5B21CDFF2E-1AA2-436A-9736-7B6B54118302%5D%0A%7B0L%2C%200C%2C%200L%2C%200C%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Tree" x="1380" y="388" w="377" h="348" measuredW="300" measuredH="264" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5B+%5D%20Data%0A%20%5B-%5D%20QuoteId%0A%20%20_%5B21CDFF2E-1AA2-436A-9736-7B6B54118302%5D%0A%20%5B-%5D%20Details%0A%20%20%5B-%5D%20IpAddress%0A%20%20%20_%5B127.0.0.1%5D%0A%20%20%5B-%5D%20DateCreated%0A%20%20%20_06/07/2013%0A%20%20%5B-%5D%20DateExpired%0A%20%20%20_07/07/2013%0A%20%5B-%5D%20Account%0A%20%20_%5BEXAM01%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="128" y="392" w="96" h="-1" measuredW="82" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Date%20Created%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="243" y="392" w="-1" h="-1" measuredW="124" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>07/09/2013%2016%3A21%3A04</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="128" y="421" w="81" h="-1" measuredW="67" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Application%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Link" x="243" y="422" w="-1" h="-1" measuredW="29" measuredH="19" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>QSS</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="128" y="457" w="67" h="-1" measuredW="30" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Host%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Link" x="245" y="457" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>DFWHQ-QSS01</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="127" y="493" w="82" h="-1" measuredW="59" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Assembly%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="243" y="493" w="145" h="-1" measuredW="138" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>FireHost.Web.Quotes.dll</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Label" x="128" y="529" w="81" h="-1" measuredW="57" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Message%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="246" y="529" w="466" h="-1" measuredW="427" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>User%20visited%20expired%20quote%20%5B21CDFF2E-1AA2-436A-9736-7B6B54118302%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1364" y="388" w="-1" h="342" measuredW="16" measuredH="100" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="124" y="564" w="60" h="-1" measuredW="44" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Details%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="243" y="591" w="974" h="94" measuredW="200" measuredH="80" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>This%20quote%20expired%2007/07/2013.</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::TextInput" x="1381" y="147" w="302" h="-1" measuredW="63" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search...</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Link" x="1690" y="151" w="-1" h="-1" measuredW="58" measuredH="19" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>ravelog%20mockup-advanced%20search%26bm%3Bravelog%20mockup-advanced%20search.bmml%26bm%3Bravelog%20mockup-advanced%20search.bmml%26bm%3Bravelog%20mockup-advanced%20search.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221577%2C104%2C1635%2C123%22%20href%3D%22ravelog%2520mockup-advanced%2520search.bmml%22%20alt%3D%22ravelog%20mockup-advanced%20search%22%20id%3D%2222%22/%3E</map>
+        <text>Advanced</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

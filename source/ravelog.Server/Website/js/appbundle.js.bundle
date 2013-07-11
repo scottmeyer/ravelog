@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true" output="appbundle.js">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+  <file>lib/angular-ui-router.min.js</file>
+  <file>lib/bootstrap.min.js</file>
+  <file>lib/moment.min.js</file>
+  <file>lib/ng-grid-2.0.7.min.js</file>
+  <file>app.js</file>
+  <file>controllers.js</file>
+  <file>services.js</file>
+  <file>states.js</file>
+</bundle>

@@ -1,0 +1,11 @@
+﻿<form>
+    <fieldset>
+        <legend>Submit Test Data to Ravelog</legend>
+        <label>URL</label>
+        <input type="text" class="span4" ng-model="url" />
+        <label>Payload</label>
+        <textarea ng-model="payload" rows="5"></textarea>
+        <input type="submit" class="btn btn-inverse" value="Send" ng-click="send()" />
+    </fieldset>
+</form>
+<p ng-model="response"></p>
