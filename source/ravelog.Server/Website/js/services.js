@@ -2,17 +2,17 @@
     .factory('log', ['$http', function($http){
         var log = {};
 
-        log.getAll = function (url, callback) {
+        log.load = function(url, callback) {
             $http({
                 url: url,
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
                 }
-            }).success(function (response) {
-                callback(response);
+            }).success(function(data) {
+                callback(data);
             });
-        }
+        };
 
         return log;
     }]);

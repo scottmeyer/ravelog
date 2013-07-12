@@ -7,7 +7,7 @@ using RaveLog.Server.Http.Models;
 
 namespace RaveLog.Server.Transports
 {
-    public delegate EventHandler LogEntryReceivedHandler(object sender, LogEntry e);
+    public delegate Task LogEntryReceivedHandler(object sender, LogEntry e);
 
     
     public abstract class LogTransport
@@ -17,12 +17,14 @@ namespace RaveLog.Server.Transports
         public abstract void Open();
         public abstract void Close();
 
-        protected void OnLogEntryReceived(object sender, LogEntry e)
+        public async Task OnLogEntryReceived(object sender, LogEntry e)
         {
-            var handler = LogEntryReceived;
-            if (handler != null)
-                handler(sender, e);
+            await Task.Run(async () =>
+            {
+                var handler = LogEntryReceived;
+                if (handler != null)
+                    await handler(sender, e);
+            });
         }
-        
     }
 }

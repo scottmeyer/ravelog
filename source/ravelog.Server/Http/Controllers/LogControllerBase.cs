@@ -1,4 +1,5 @@
 ﻿using RaveLog.Server.Http.Models;
+using RaveLog.Server.Transports;
 using Raven.Client;
 using System;
 using System.Collections.Generic;
@@ -15,38 +16,50 @@ namespace RaveLog.Server.Http.Controllers
 {
     public abstract class LogControllerBase : ApiController
     {
+        private readonly LogTransport _transport;
+
+        protected LogControllerBase(LogTransport transport)
+        {
+            _transport = transport;
+        }
         protected IAsyncDocumentSession Session;
+
+        public abstract Severity Severity { get; }
 
         public override async Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)
         {
             using (Session = Program.DocumentStore.OpenAsyncSession())
             {
 
-                var response = await base.ExecuteAsync(controllerContext, cancellationToken);
+                return await base.ExecuteAsync(controllerContext, cancellationToken);
 
-                try
-                {
-                    response.EnsureSuccessStatusCode();
-                    await Session.SaveChangesAsync();
-                }
-                catch (Exception e)
-                {
-                    System.Diagnostics.Trace.Write(e);
-                }
+                //We're not currently doing any storing here.
+                //try
+                //{
+                //    response.EnsureSuccessStatusCode();
+                //    await Session.SaveChangesAsync();
+                //}
+                //catch (Exception e)
+                //{
+                //    System.Diagnostics.Trace.Write(e);
+                //}
 
-                return response;
+                //return response;
             }
         }
 
         public virtual async Task<HttpResponseMessage> Post([FromBody]LogEntry entry)
         {
-            await Session.StoreAsync(entry);
+            entry.Severity = Severity.ToString();
+            await _transport.OnLogEntryReceived(this, entry);
             return Success();
         }
         
         public virtual async Task<HttpResponseMessage> Get(string id = null)
         {
-            return Success(await Session.LoadAsync<LogEntry>(id));
+            return id != null 
+                ? Success(await Session.LoadAsync<LogEntry>(id)) 
+                : Success(await Session.Query<LogEntry>().Where(x => x.Severity == Severity.ToString()).ToListAsync());
         }
 
         protected HttpResponseMessage Success()

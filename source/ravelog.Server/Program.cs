@@ -1,4 +1,5 @@
 ﻿using RaveLog.Server.Http;
+using RaveLog.Server.Transports;
 using Raven.Client.Embedded;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,12 @@ namespace RaveLog.Server
 
     public class RaveLogServiceControl:ServiceControl
     {
-        private CancellationTokenSource _cancellationTokenSource;
+        private readonly LogTransportHub _hub = new LogTransportHub();
+
         public bool Start(HostControl hostControl)
         {
+            _hub.Transports.Add(new RaveLogHttpTransport());
+
             Program.DocumentStore = new EmbeddableDocumentStore
             {
                 UseEmbeddedHttpServer = true,
@@ -39,13 +43,13 @@ namespace RaveLog.Server
 
             Program.DocumentStore.Initialize();
 
-            _cancellationTokenSource = RaveLogHttpTransport.Start();
+            _hub.InitializeTransports();
             return true;
         }
 
         public bool Stop(HostControl hostControl)
         {
-            _cancellationTokenSource.Cancel();
+            _hub.CloseTransports();
             return true;
         }
 
