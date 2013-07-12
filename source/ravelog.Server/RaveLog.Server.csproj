@@ -93,14 +93,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Website\css\app.less" />
-    <None Include="Website\css\appcss.css.bundle" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Http\Filters\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Website\css\app.css" />
+    <Content Include="Website\css\app.css">
+      <DependentUpon>app.less</DependentUpon>
+    </Content>
     <Content Include="Website\css\app.min.css">
+      <DependentUpon>app.less</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Website\css\bootstrap.min.css">

@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>RaveLog Example</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/ng-grid.min.css" />
     <link rel="stylesheet" href="css/app.min.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
 </head>
@@ -14,11 +16,11 @@
                 <li ng-class="{ active: active('/log/warning') }"><a href="#log/warning">Warning</a></li>
                 <li ng-class="{ active: active('/log/error') }"><a href="#log/error">Error</a></li>
                 <li ng-class="{ active: active('/log/trace') }"><a href="#log/trace">Trace</a></li>
-                <li ng-class="{ active: active('/test/submit') }"><a href="#test/submit">Test</a></li>
+                <li ng-class="{ active: active('/test') }"><a href="#test">Test</a></li>
             </ul>
         </div>
         <div class="span12">
-            <div ng-view></div>
+            <div ui-view></div>
         </div>
 
 
